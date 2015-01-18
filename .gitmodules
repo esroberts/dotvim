@@ -46,3 +46,18 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "bundle/windowswap"]
+	path = bundle/windowswap
+	url = https://github.com/wesQ3/vim-windowswap.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "surround/repeat"]
+	path = surround/repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "repeat"]
+	path = repeat
+	url = https://github.com/tpope/vim-repeat.git

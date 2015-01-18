@@ -145,7 +145,7 @@ nmap <C-t> :CtrlPBufTag<cr>
 "syntastic
 "let g:syntastic_error_symbol='✗'
 let g:syntastic_enable_highlighting=1
-let g:syntastic_quiet_warnings=0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list=0
 let g:syntastic_loc_list_height=5
 let g:syntastic_python_checkers=['flake8']
