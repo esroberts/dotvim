@@ -1,1 +1,3 @@
-ln -s ~/.vimrc ~/.vim/vimrc
+To get started set up this .vimrc symlink in your home directory:
+
+    ln -s ~/.vimrc ~/.vim/vimrc
