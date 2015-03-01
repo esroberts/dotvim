@@ -58,3 +58,9 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://github.com/godlygeek/tabular.git

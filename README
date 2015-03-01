@@ -1,1 +1,1 @@
-My vim config
+ln -s ~/.vimrc ~/.vim/vimrc
