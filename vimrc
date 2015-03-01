@@ -18,18 +18,17 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set nu
-" set relativenumber
 " searching
-set ignorecase
-set smartcase
-" replace all by default
-set gdefault
+set ignorecase smartcase
+set gdefault " replace all by default
 " incremental search
 set incsearch
 set showmatch
 set hlsearch
 " clear search
 nnoremap <leader><space> :noh<cr>
+set backupdir=~/.tmp
+set directory=~/.tmp " Don't clutter my dirs up with swp and tmp files
 
 " line wrapping
 set wrap
@@ -110,12 +109,19 @@ set hlsearch
 
 set path+=/usr/local/project/panama/**
 
+" autocommands
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
 "key mappings
 " more convenient escape to normal mode
 " inoremap ; :
 inoremap jj <ESC>
 " vertical split
 nnoremap <leader>w <C-w>v<C-w>l
+" I don't actually know whwat these do anymore
 nnoremap <tab> %
 vnoremap <tab> %
 
@@ -125,17 +131,17 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" don't use this much
 nnoremap <leader>a :Ag 
+map <leader>cw :close
+" a quicker save
+map <leader>s :w
 
 nnoremap <leader>s :w<cr>
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 nnoremap <leader>rp :RainbowParenthesesToggle<cr>
 nmap <leader>cs :close<cr>
 
-nmap <leader>ev :vsplit $MYVIMRC<cr>
+nmap <leader>ev :e $MYVIMRC<cr>
 nmap <leader>sv :source $MYVIMRC<cr>
 nmap <leader>er :Errors<cr>
 nmap <leader>gl :! git logo<cr>
@@ -164,3 +170,7 @@ nnoremap <leader>gD <c-w>h<c-w>c
 
 "tagbar
 nmap <leader>tb :TagbarToggle<cr>
+
+function! SendKeys(args)
+    execute tmux send-keys -t bottom './unit.sh a:args' C-m
+endfunction
